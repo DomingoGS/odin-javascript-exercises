@@ -1,10 +1,6 @@
 const palindromes = function (str) {
-    let cleanStr = str.replace(/[^\p{L}]/gu, '');
-    cleanStr = cleanStr.toLowerCase();
-
-    const reversedStr = cleanStr.split('').reverse().join('');
-
-    return cleanStr.localeCompare(reversedStr) === 0;
+    const processedString = str.toLowerCase().replace(/[^a-z]/g, '');
+    return processedString.split('').reverse().join('') == processedString;
 };
 
 // Do not edit below this line
