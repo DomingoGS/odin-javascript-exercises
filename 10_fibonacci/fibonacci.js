@@ -1,10 +1,10 @@
-const fibonacci = function(specificMember) {
-    if(specificMember < 1) return "OOPS";
-    let previousValue = 1;
+const fibonacci = function(count) {
+    if(count < 0) return "OOPS";
+    if(count === 0) return 0;
+    let previousValue = 0;
     let currentValue = 1;
-    let result;
-    for (member = 3; member <= specificMember; member++) {
-        result = previousValue + currentValue;
+    for (member = 1; member < count; member++) {
+        const result = previousValue + currentValue;
         previousValue = currentValue;
         currentValue = result;
     }
